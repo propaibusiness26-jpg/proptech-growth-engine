@@ -41,7 +41,6 @@ function Landing() {
       <main>
         <Hero />
         <Problem />
-        <Logos />
         <Services />
         <Results />
         <CTA />
@@ -175,28 +174,6 @@ function Problem() {
             Meanwhile the top agents aren't working harder.{' '}
             They're working with <span className="italic text-accent">better systems.</span>
           </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ───────────────────────── Logos / Trust ───────────────────────── */
-
-function Logos() {
-  const stack = ["WhatsApp", "Calendars", "CRM Sync", "MoMo", "Sheets", "HubSpot"];
-  return (
-    <section className="border-y border-border bg-secondary/40 py-8 sm:py-10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Plugs into the tools you already use
-        </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground sm:gap-x-10">
-          {stack.map((i) => (
-            <span key={i} className="font-display text-base text-primary/70 sm:text-lg md:text-xl">
-              {i}
-            </span>
-          ))}
         </div>
       </div>
     </section>
