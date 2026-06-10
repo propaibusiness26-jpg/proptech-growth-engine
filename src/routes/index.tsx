@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import logoAsset from "@/assets/proptech-ghana-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PropTech Ghana — AI Automation for Ghanaian Businesses" },
+      { title: "PropTech Ghana — AI Systems for Real Estate Agents in Accra" },
       {
         name: "description",
         content:
-          "PropTech Ghana builds AI-powered systems that save Ghanaian businesses hours every week — automated sales, support, and operations done for you.",
+          "Real estate agents in Accra waste 28 hours/week on admin. PropTech Ghana builds AI systems that reply, qualify, book viewings, and follow up — automatically.",
       },
-      { property: "og:title", content: "PropTech Ghana — AI Automation Agency" },
+      { property: "og:title", content: "PropTech Ghana — AI for Accra Real Estate Agents" },
       {
         property: "og:description",
         content:
-          "AI systems that handle sales, support, and operations for businesses in Ghana. Book a free strategy call.",
+          "Save 15–20 hours a week. 35% higher lead conversion. AI systems built for real estate agents in Ghana.",
       },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
@@ -23,15 +22,8 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "/" } as never,
     ],
     links: [
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "",
-      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap",
@@ -48,11 +40,10 @@ function Landing() {
       <Nav />
       <main>
         <Hero />
+        <Problem />
         <Logos />
         <Services />
-        <Process />
         <Results />
-        <FAQ />
         <CTA />
       </main>
       <Footer />
@@ -73,10 +64,9 @@ function Nav() {
           </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#services" className="transition hover:text-foreground">Services</a>
-          <a href="#process" className="transition hover:text-foreground">Process</a>
+          <a href="#problem" className="transition hover:text-foreground">The Problem</a>
+          <a href="#services" className="transition hover:text-foreground">The System</a>
           <a href="#results" className="transition hover:text-foreground">Results</a>
-          <a href="#faq" className="transition hover:text-foreground">FAQ</a>
         </nav>
         <a
           href="#contact"
@@ -103,18 +93,19 @@ function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            AI automation, built in Ghana
+            For real estate agents in Accra
           </div>
 
           <h1 className="font-display text-5xl leading-[1.05] text-primary md:text-7xl">
-            AI systems that run
+            Stop losing <span className="italic text-accent">$1,950 a week</span>
             <br />
-            <span className="italic text-accent">your business</span> while you sleep.
+            to admin work.
           </h1>
 
           <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            We build custom AI agents and automations for Ghanaian businesses — handling
-            sales follow-ups, customer support, and back-office work, 24/7.
+            Real estate agents spend <strong className="text-foreground">72% of their time on admin</strong> —
+            answering the same WhatsApp messages, chasing cold leads, booking viewings one by one.
+            We build the AI system that does it all for you.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -126,25 +117,25 @@ function Hero() {
               <span className="transition group-hover:translate-x-0.5">→</span>
             </a>
             <a
-              href="#services"
+              href="#problem"
               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-card px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-secondary sm:w-auto"
             >
-              See what we build
+              See how it works
             </a>
           </div>
 
           <p className="mt-5 text-xs text-muted-foreground">
-            30-minute call · No obligation · Tailored to your business
+            30-minute call · No obligation · Tailored to your agency
           </p>
         </div>
 
         {/* Hero stat strip */}
         <div className="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
           {[
-            { k: "20+", v: "Hours saved / week" },
-            { k: "24/7", v: "Always-on AI agents" },
-            { k: "3×", v: "Faster lead response" },
-            { k: "100%", v: "Built for Ghana 🇬🇭" },
+            { k: "28 hrs", v: "Wasted weekly on admin" },
+            { k: "$1,950", v: "Lost revenue / week" },
+            { k: "35%", v: "Higher lead conversion" },
+            { k: "15–20", v: "Hours saved weekly" },
           ].map((s) => (
             <div key={s.v} className="bg-card px-6 py-7 text-center">
               <div className="font-display text-3xl text-primary">{s.k}</div>
@@ -159,25 +150,52 @@ function Hero() {
   );
 }
 
+/* ───────────────────────── Problem ───────────────────────── */
+
+function Problem() {
+  return (
+    <section id="problem" className="border-t border-border py-24 md:py-32">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="text-xs uppercase tracking-[0.2em] text-accent">The hidden cost</div>
+        <h2 className="mt-3 font-display text-4xl text-primary md:text-5xl">
+          That's 28 hours a week — <span className="italic">not selling.</span>
+          <br />
+          Just surviving.
+        </h2>
+
+        <div className="mt-10 space-y-6 text-lg leading-relaxed text-muted-foreground">
+          <p>
+            Answering the same WhatsApp messages. Manually updating lead details. Chasing cold
+            leads by hand. Booking viewings one by one.
+          </p>
+          <p>
+            At <strong className="text-foreground">$150/hr</strong>, that's{" "}
+            <strong className="text-foreground">$1,950 in lost revenue.</strong>{" "}
+            <span className="italic">Every. Single. Week.</span>
+          </p>
+          <p className="font-display text-2xl text-primary md:text-3xl">
+            Meanwhile the top agents aren't working harder.
+            <br />
+            They're working with <span className="italic text-accent">better systems.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ───────────────────────── Logos / Trust ───────────────────────── */
 
 function Logos() {
-  const industries = [
-    "Real Estate",
-    "Hospitality",
-    "Fintech",
-    "Logistics",
-    "E-commerce",
-    "Healthcare",
-  ];
+  const stack = ["WhatsApp", "Calendars", "CRM Sync", "MoMo", "Sheets", "HubSpot"];
   return (
     <section className="border-y border-border bg-secondary/40 py-10">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Trusted across industries in Ghana
+          Plugs into the tools you already use
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-muted-foreground">
-          {industries.map((i) => (
+          {stack.map((i) => (
             <span key={i} className="font-display text-xl text-primary/70">
               {i}
             </span>
@@ -188,28 +206,33 @@ function Logos() {
   );
 }
 
-/* ───────────────────────── Services ───────────────────────── */
+/* ───────────────────────── Services / What it does ───────────────────────── */
 
 const services = [
   {
     n: "01",
-    title: "AI Sales Agents",
-    body: "Voice and chat agents that qualify leads, answer questions, and book meetings into your calendar — in English, Twi, or Pidgin.",
+    title: "Replies to every lead instantly — 24/7",
+    body: "No more lost leads at 9pm. The AI responds within seconds on WhatsApp, Instagram, and your website — in English, Twi, or Pidgin.",
   },
   {
     n: "02",
-    title: "Customer Support Automation",
-    body: "WhatsApp, Instagram, and website bots that resolve 70%+ of repetitive questions and hand off cleanly to your team.",
+    title: "Qualifies leads by budget and location",
+    body: "Every inquiry gets scored and tagged so you only spend your time on serious buyers ready to view.",
   },
   {
     n: "03",
-    title: "Workflow & Back-office",
-    body: "Automate invoicing, reporting, onboarding, and document handling. Connect Sheets, Mailgun, MoMo, and the tools you already use.",
+    title: "Books viewings directly into your calendar",
+    body: "Two-way calendar sync means qualified leads pick a slot themselves — no back-and-forth, no missed appointments.",
   },
   {
     n: "04",
-    title: "Custom AI Tools",
-    body: "Internal dashboards and AI assistants tailored to your team — trained on your data, your processes, your way of working.",
+    title: "Follows up on cold leads automatically",
+    body: "The system nurtures every lead with personalized follow-ups for weeks, so deals you'd otherwise lose still close.",
+  },
+  {
+    n: "05",
+    title: "Updates your CRM without you touching it",
+    body: "Every conversation, status change, and viewing is logged automatically. Your pipeline is always up to date.",
   },
 ];
 
@@ -218,13 +241,13 @@ function Services() {
     <section id="services" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-accent">Services</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-accent">The system</div>
           <h2 className="mt-3 font-display text-4xl text-primary md:text-5xl">
-            Done-for-you AI, <span className="italic">end to end.</span>
+            One AI system. <span className="italic">All your admin, handled.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            We design, build, and maintain the systems. You keep your team focused on the
-            work that actually moves the business forward.
+            PropTech Ghana gives real estate agents in Accra an AI system that handles every
+            repetitive task automatically — so you can focus on closing.
           </p>
         </div>
 
@@ -250,149 +273,49 @@ function Services() {
   );
 }
 
-/* ───────────────────────── Process ───────────────────────── */
-
-const steps = [
-  {
-    t: "Discover",
-    d: "A 30-minute call to map your workflows and find the highest-leverage automation opportunities.",
-  },
-  {
-    t: "Design",
-    d: "We scope a clear plan — what gets built, expected impact, and a fixed timeline. No surprises.",
-  },
-  {
-    t: "Build",
-    d: "Most systems ship in 2–4 weeks. We integrate with the tools you already use.",
-  },
-  {
-    t: "Optimize",
-    d: "We monitor performance and refine continuously so the system keeps getting smarter.",
-  },
-];
-
-function Process() {
-  return (
-    <section id="process" className="bg-primary py-24 text-primary-foreground md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-[oklch(0.72_0.13_75)]">
-            Process
-          </div>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl">
-            From idea to live system in <span className="italic">weeks, not months.</span>
-          </h2>
-        </div>
-
-        <div className="mt-16 grid gap-8 md:grid-cols-4">
-          {steps.map((s, i) => (
-            <div key={s.t} className="relative">
-              <div className="font-display text-5xl text-[oklch(0.72_0.13_75)]">
-                0{i + 1}
-              </div>
-              <h3 className="mt-4 font-display text-2xl">{s.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">
-                {s.d}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ───────────────────────── Results / Testimonial ───────────────────────── */
 
 function Results() {
   return (
-    <section id="results" className="py-24 md:py-32">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <div className="text-xs uppercase tracking-[0.2em] text-accent">Why teams choose us</div>
-        <blockquote className="mt-6 font-display text-3xl leading-tight text-primary md:text-5xl">
-          “We replaced 30 hours a week of manual follow-ups with an AI agent that never
-          sleeps. <span className="italic text-accent">Booked revenue doubled in 60 days.</span>”
-        </blockquote>
-        <div className="mt-8 text-sm text-muted-foreground">
-          — Operations Lead, Accra-based real estate firm
+    <section id="results" className="bg-primary py-24 text-primary-foreground md:py-32">
+      <div className="mx-auto max-w-5xl px-6 text-center">
+        <div className="text-xs uppercase tracking-[0.2em] text-[oklch(0.72_0.13_75)]">
+          The result
+        </div>
+        <h2 className="mt-3 font-display text-4xl md:text-6xl">
+          15–20 hours saved weekly.
+          <br />
+          <span className="italic text-[oklch(0.72_0.13_75)]">35% higher lead conversion.</span>
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl text-primary-foreground/70">
+          More deals closed. Less time wasted. The system runs while you sleep.
+        </p>
+
+        <div className="mx-auto mt-16 max-w-3xl rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-10 text-left md:p-12">
+          <div className="font-display text-3xl leading-tight md:text-4xl">
+            "One of our agents saved <span className="text-[oklch(0.72_0.13_75)]">15 hours a week</span> and
+            closed <span className="text-[oklch(0.72_0.13_75)]">5 extra deals in 6 months</span> —
+            <span className="italic"> $50,000 in extra commissions.</span>"
+          </div>
+          <div className="mt-8 text-sm text-primary-foreground/60">
+            — Accra-based real estate agency
+          </div>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-3xl gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-4xl gap-6 md:grid-cols-3">
           {[
-            { k: "Local-first", v: "Built for Ghanaian businesses, channels, and payment rails." },
-            { k: "Fixed scope", v: "Clear deliverables and timelines. No runaway invoices." },
-            { k: "We maintain it", v: "Monitoring and improvements included after launch." },
+            { k: "15–20 hrs", v: "Saved every week per agent" },
+            { k: "+35%", v: "Lead-to-viewing conversion" },
+            { k: "$50,000", v: "Extra commissions in 6 months" },
           ].map((b) => (
-            <div key={b.k} className="rounded-xl border border-border bg-card p-6 text-left">
-              <div className="font-display text-lg text-primary">{b.k}</div>
-              <p className="mt-2 text-sm text-muted-foreground">{b.v}</p>
+            <div
+              key={b.k}
+              className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 text-left"
+            >
+              <div className="font-display text-2xl text-[oklch(0.72_0.13_75)]">{b.k}</div>
+              <p className="mt-2 text-sm text-primary-foreground/70">{b.v}</p>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ───────────────────────── FAQ ───────────────────────── */
-
-const faqs = [
-  {
-    q: "How long does a project take?",
-    a: "Most AI agents and automations go live in 2–4 weeks. Larger custom builds take 6–8 weeks. We agree timelines up front.",
-  },
-  {
-    q: "What does it cost?",
-    a: "Projects start from a fixed scoping fee. After the strategy call, we send a clear proposal with deliverables and pricing — no surprises.",
-  },
-  {
-    q: "Do you work with non-tech businesses?",
-    a: "Yes. Most of our clients are not technical. We handle the build, integration, and training so your team can simply use the system.",
-  },
-  {
-    q: "Which tools do you integrate with?",
-    a: "WhatsApp, Instagram, Gmail, Google Sheets, Notion, HubSpot, Airtable, Hubtel, Paystack, MoMo APIs, and most modern SaaS tools.",
-  },
-];
-
-function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
-  return (
-    <section id="faq" className="border-t border-border bg-secondary/40 py-24 md:py-32">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.5fr]">
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-accent">FAQ</div>
-          <h2 className="mt-3 font-display text-4xl text-primary md:text-5xl">
-            Questions, <span className="italic">answered.</span>
-          </h2>
-        </div>
-        <div className="divide-y divide-border border-y border-border">
-          {faqs.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <button
-                key={f.q}
-                onClick={() => setOpen(isOpen ? null : i)}
-                className="block w-full py-6 text-left"
-              >
-                <div className="flex items-center justify-between gap-6">
-                  <span className="font-display text-xl text-primary">{f.q}</span>
-                  <span
-                    className={`text-2xl text-accent transition-transform ${
-                      isOpen ? "rotate-45" : ""
-                    }`}
-                  >
-                    +
-                  </span>
-                </div>
-                {isOpen && (
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                    {f.a}
-                  </p>
-                )}
-              </button>
-            );
-          })}
         </div>
       </div>
     </section>
@@ -410,27 +333,21 @@ function CTA() {
           <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[oklch(0.72_0.13_75/0.3)] blur-3xl" />
 
           <h2 className="relative font-display text-4xl leading-tight md:text-6xl">
-            Let's automate the work
+            Stop surviving.
             <br />
-            <span className="italic text-[oklch(0.72_0.13_75)]">slowing you down.</span>
+            <span className="italic text-[oklch(0.72_0.13_75)]">Start selling.</span>
           </h2>
           <p className="relative mx-auto mt-5 max-w-lg text-primary-foreground/70">
-            Book a free 30-minute strategy call. We'll map 2–3 opportunities you can act on
-            — whether you work with us or not.
+            Book a free 30-minute strategy call. We'll map exactly where you're losing hours —
+            and show you the AI system that wins them back.
           </p>
 
-          <div className="relative mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="relative mt-9 flex justify-center">
             <a
               href="mailto:hello@proptechghana.com?subject=Strategy%20Call%20Request"
-              className="inline-flex w-full items-center justify-center rounded-full bg-background px-7 py-3.5 text-sm font-medium text-primary transition hover:bg-background/90 sm:w-auto"
+              className="inline-flex items-center justify-center rounded-full bg-background px-8 py-3.5 text-sm font-medium text-primary transition hover:bg-background/90"
             >
-              Email us →
-            </a>
-            <a
-              href="https://wa.me/233000000000"
-              className="inline-flex w-full items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3.5 text-sm font-medium text-primary-foreground transition hover:bg-primary-foreground/10 sm:w-auto"
-            >
-              WhatsApp
+              Book my strategy call →
             </a>
           </div>
         </div>
