@@ -58,8 +58,8 @@ function Nav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2.5">
-          <img src={logoAsset.url} alt="PropTech Ghana" className="h-8 w-8 shrink-0 object-contain sm:h-9 sm:w-9" />
-          <span className="font-display text-lg text-primary sm:text-xl">
+          <img src={logoAsset.url} alt="PropTech Ghana" className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12" />
+          <span className="font-display text-xl text-primary sm:text-2xl">
             PropTech <span className="text-accent">Ghana</span>
           </span>
         </a>
@@ -358,8 +358,8 @@ function Footer() {
     <footer className="border-t border-border py-8 sm:py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
         <div className="flex items-center gap-2.5">
-          <img src={logoAsset.url} alt="PropTech Ghana" className="h-6 w-6 object-contain sm:h-7 sm:w-7" />
-          <span className="font-display text-sm text-primary sm:text-base">PropTech Ghana</span>
+          <img src={logoAsset.url} alt="PropTech Ghana" className="h-8 w-8 object-contain sm:h-10 sm:w-10" />
+          <span className="font-display text-base text-primary sm:text-lg">PropTech Ghana</span>
         </div>
         <div>© {new Date().getFullYear()} PropTech Ghana. Accra, Ghana.</div>
       </div>
