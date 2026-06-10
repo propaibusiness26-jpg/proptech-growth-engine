@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/proptech-ghana-logo.png.asset.json";
+import logoPng from "@/assets/PropTech_Ghana.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,11 +57,8 @@ function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <img src={logoAsset.url} alt="PropTech Ghana" className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16" />
-          <span className="font-display text-xl text-primary sm:text-2xl">
-            PropTech <span className="text-accent">Ghana</span>
-          </span>
+        <a href="#top" className="flex items-center">
+          <img src={logoPng} alt="PropTech Ghana" className="h-20 w-20 shrink-0 object-contain mix-blend-multiply sm:h-24 sm:w-24" />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#problem" className="transition hover:text-foreground">The Problem</a>
@@ -88,8 +86,11 @@ function Hero() {
         <div className="absolute -right-20 top-20 h-[250px] w-[250px] rounded-full bg-[oklch(0.72_0.13_75/0.12)] blur-3xl sm:right-0 sm:top-40 sm:h-[400px] sm:w-[400px]" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-24 md:pt-32">
+      <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 sm:pb-24 sm:pt-10 md:pt-14">
         <div className="mx-auto max-w-3xl text-center">
+          <div className="mb-6 flex justify-center">
+            <img src={logoPng} alt="PropTech Ghana" className="h-48 w-48 object-contain mix-blend-multiply sm:h-56 sm:w-56 md:h-64 md:w-64" />
+          </div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             For real estate agents in Accra
@@ -115,7 +116,7 @@ function Hero() {
               <span className="transition group-hover:translate-x-0.5">→</span>
             </a>
             <a
-              href="#problem"
+              href="#services"
               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-card px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-secondary sm:w-auto"
             >
               See how it works
@@ -334,9 +335,8 @@ function Footer() {
   return (
     <footer className="border-t border-border py-8 sm:py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
-        <div className="flex items-center gap-2.5">
-          <img src={logoAsset.url} alt="PropTech Ghana" className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
-          <span className="font-display text-lg text-primary sm:text-xl">PropTech Ghana</span>
+        <div className="flex items-center">
+          <img src={logoPng} alt="PropTech Ghana" className="h-16 w-16 object-contain mix-blend-multiply sm:h-20 sm:w-20" />
         </div>
         <div>© {new Date().getFullYear()} PropTech Ghana. Accra, Ghana.</div>
       </div>
