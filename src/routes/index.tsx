@@ -88,9 +88,6 @@ function Hero() {
 
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:px-6 sm:pb-24 sm:pt-10 md:pt-14">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 flex justify-center">
-            <img src={logoPng} alt="PropTech Ghana" className="h-48 w-48 object-contain mix-blend-multiply sm:h-56 sm:w-56 md:h-64 md:w-64" />
-          </div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             For real estate agents in Accra
