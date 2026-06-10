@@ -358,8 +358,8 @@ function Footer() {
     <footer className="border-t border-border py-8 sm:py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
         <div className="flex items-center gap-2.5">
-          <img src={logoAsset.url} alt="PropTech Ghana" className="h-6 w-6 object-contain sm:h-7 sm:w-7" />
-          <span className="font-display text-sm text-primary sm:text-base">PropTech Ghana</span>
+          <img src={logoAsset.url} alt="PropTech Ghana" className="h-8 w-8 object-contain sm:h-10 sm:w-10" />
+          <span className="font-display text-base text-primary sm:text-lg">PropTech Ghana</span>
         </div>
         <div>© {new Date().getFullYear()} PropTech Ghana. Accra, Ghana.</div>
       </div>
