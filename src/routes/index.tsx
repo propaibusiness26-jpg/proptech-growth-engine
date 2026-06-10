@@ -57,12 +57,10 @@ function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6 sm:py-4">
-        <a href="#top" className="flex items-center">
-          <img src={logoPng} alt="PropTech Ghana" className="h-12 w-12 shrink-0 object-contain mix-blend-multiply sm:h-14 sm:w-14" />
-        </a>
+        <a href="#top" className="font-display text-lg text-primary">PropTech Ghana</a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#problem" className="transition hover:text-foreground">The Problem</a>
-          <a href="#services" className="transition hover:text-foreground">The System</a>
+          <a href="#problem" className="transition hover:text-foreground">Challenges</a>
+          <a href="#services" className="transition hover:text-foreground">Solution</a>
           <a href="#results" className="transition hover:text-foreground">Results</a>
         </nav>
         <a
@@ -184,7 +182,7 @@ const services = [
   {
     n: "01",
     title: "Replies to every lead instantly — 24/7",
-    body: "No more lost leads at 9pm. The AI responds within seconds on WhatsApp, Instagram, and your website — in English, Twi, or Pidgin.",
+    body: "No more lost leads at 9pm. The AI responds within seconds on WhatsApp, Instagram, and your website.",
   },
   {
     n: "02",
