@@ -56,9 +56,9 @@ function Landing() {
 function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6 sm:py-3">
         <a href="#top" className="flex items-center">
-          <img src={logoPng} alt="PropTech Ghana" className="h-20 w-20 shrink-0 object-contain mix-blend-multiply sm:h-24 sm:w-24" />
+          <img src={logoPng} alt="PropTech Ghana" className="h-12 w-12 shrink-0 object-contain mix-blend-multiply sm:h-14 sm:w-14" />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#problem" className="transition hover:text-foreground">The Problem</a>
@@ -331,7 +331,7 @@ function CTA() {
 function Footer() {
   return (
     <footer className="border-t border-border py-8 sm:py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm">
         <div className="flex items-center">
           <img src={logoPng} alt="PropTech Ghana" className="h-16 w-16 object-contain mix-blend-multiply sm:h-20 sm:w-20" />
         </div>
