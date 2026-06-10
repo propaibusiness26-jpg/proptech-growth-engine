@@ -108,6 +108,15 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Hide vertical scrollbar but keep scrolling */
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
   .font-display {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
